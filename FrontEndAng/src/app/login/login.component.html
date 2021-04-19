@@ -1,1 +1,27 @@
-<p>login works!</p>
+<mat-toolbar>
+  <span class="toolbar">Login</span>
+</mat-toolbar>
+<mat-card class="my-card">
+  <mat-card-content>
+    <small class="error">{{ message }}</small>
+    <form>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" type="email" name="email" ngModel email [(ngModel)]="loginInterface.email" required
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="loginInterface.password" required>
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="login()" color="primary">LOGIN</button>
+  </mat-card-actions>
+  <a href="/register">Need an account? Register here</a>
+</mat-card>
