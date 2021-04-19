@@ -1,0 +1,15 @@
+.toolbar {
+  text-align: center;
+  display: inline-block;
+  width: 97.8%;
+}
+
+.my-card{
+  text-align: center;
+  display: inline-block;
+  width: 97.8%;
+}
+
+.error {
+  color: red;
+}

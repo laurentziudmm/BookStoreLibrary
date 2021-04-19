@@ -1,1 +1,91 @@
-<p>register works!</p>
+<mat-toolbar>
+  <span class="toolbar">Registration</span>
+</mat-toolbar>
+<mat-card class="my-card">
+  <mat-card-content>
+    <small class="error">{{ message }}</small>
+    <form>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First name" name="First name" [(ngModel)]="registerInterface.firstName" required>
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input matInput  placeholder="Last name" name="Last name" [(ngModel)]="registerInterface.surname" required>
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput  placeholder="Password" name="Password" type="password" [(ngModel)]="registerInterface.password" required>
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+    <form>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput  placeholder="Password" name="Password" type="password" [(ngModel)]="registerInterface.confirmedPassword" required>
+        <mat-error>Required field</mat-error>
+      </mat-form-field>
+    </form>
+    <form>
+      <form>
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <input matInput  placeholder="Country" name="country" [(ngModel)]="registerInterface.address.country" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>County</mat-label>
+          <input matInput  placeholder="County" name="county" [(ngModel)]="registerInterface.address.county" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput  placeholder="City" name="city" [(ngModel)]="registerInterface.address.city" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>Street Address</mat-label>
+          <input matInput  placeholder="Street Address" name="streetAddress" [(ngModel)]="registerInterface.address.streetAddress" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>Postal Code</mat-label>
+          <input matInput  placeholder="Postal Code" name="postalCode" [(ngModel)]="registerInterface.address.postalCode" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput  placeholder="Phone Number" name="phoneNumber" [(ngModel)]="registerInterface.address.phoneNumber" required>
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+      <form>
+        <mat-form-field>
+          <mat-label>Email Address</mat-label>
+          <input matInput type="email" ngModel email placeholder="Email Address" name="emailAddress" [(ngModel)]="registerInterface.address.emailAddress" required
+                 pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+          <mat-error>Required field</mat-error>
+        </mat-form-field>
+      </form>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="register()" color="primary">REGISTER</button>
+  </mat-card-actions>
+</mat-card>
