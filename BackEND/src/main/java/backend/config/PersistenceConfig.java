@@ -22,7 +22,7 @@ public class PersistenceConfig {
     public DataSource getDataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
-        dataSourceBuilder.url("jdbc:mysql://localhost:3306/BookingApp");
+        dataSourceBuilder.url("jdbc:mysql://192.168.0.177:3306/BookStoreLibrary");
         dataSourceBuilder.username("root");
         dataSourceBuilder.password("root");
         return dataSourceBuilder.build();
