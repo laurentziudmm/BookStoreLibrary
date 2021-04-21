@@ -1,6 +1,6 @@
 INSERT INTO user (`first_name`, `surname`, `password`, `card_number`,
 `address_id`)
-VALUES ('Bogdan', 'Cristea', 'abc', '123456', 10),
+VALUES ('Laur', 'Man', 'abc', '123456', 10),
 
 ('Matei', 'Petcu', 'abcd', '234567', 11),
 
