@@ -20,11 +20,11 @@ public class PersistenceConfig {
 
     @Bean
     public DataSource getDataSource() {
-        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
-        dataSourceBuilder.url("jdbc:mysql://192.168.0.177:3306/BookStoreLibrary");
-        dataSourceBuilder.username("laur");
-        dataSourceBuilder.password("laur");
-        return dataSourceBuilder.build();
+        return DataSourceBuilder.create()
+                .driverClassName("com.mysql.cj.jdbc.Driver")
+                .url("jdbc:mysql://192.168.0.177:3306/BookStoreLibrary")
+                .username("laur")
+                .password("laur")
+                .build();
     }
 }
