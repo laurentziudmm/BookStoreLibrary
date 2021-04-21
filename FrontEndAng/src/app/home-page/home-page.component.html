@@ -1,0 +1,12 @@
+<div class="container">
+  <div fxFlex fxLayout>
+    <div fxFlex fxLayoutAlign="center center">
+      <mat-form-field>
+        <input matInput placeholder="Select City" [(ngModel)]="cityInterface.city" required>
+      </mat-form-field>
+      <button mat-icon-button (click)="getCity()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
