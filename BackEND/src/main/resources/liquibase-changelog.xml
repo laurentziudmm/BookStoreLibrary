@@ -5,9 +5,16 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:pro="http://www.liquibase.org/xml/ns/pro"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
-         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd
-
-
+         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+    <include file="db/changelog/addressTable.sql"/>
     <include file="db/changelog/userTable.sql"/>
-    <include file="db/changelog/addEmailColumnToUser.sql"/>
+    <include file="db/changelog/hotelTable.sql"/>
+    <include file="db/changelog/roomTable.sql"/>
+    <include file="db/changelog/bookingTable.sql"/>
+    <include file="db/changelog/addressInsert.sql"/>
+    <include file="db/changelog/hotelInsert.sql"/>
+    <include file="db/changelog/roomInsert.sql"/>
+    <include file="db/changelog/userInsert.sql"/>
+    <include file="db/changelog/bookingInsert.sql"/>
+    <include file="db/changelog/removeBookingIdFromRoom.sql"/>
 </databaseChangeLog>
